@@ -1,0 +1,14 @@
+<h2 style="text-align: center;">로그인 페이지</h2>
+<form method="post" action="{% url 'users:login' %}">
+<hr />
+<p>{% csrf_token %} {%include 'users/form_errors.html' %}</p>
+<p><!--코드 추가--></p>
+<div><strong><label>사용자 ID</label></strong> <input id="username" maxlength="20" name="username" type="text" /></div>
+<div><strong><label>비밀번호</label></strong> <input id="password" maxlength="20" name="password" type="password" /></div>
+<hr />
+<ul style="list-style-type: square;">
+<li><span style="color: #0000ff;"><strong><a href="{%url 'users:signup' %}">계정이 없다면 회원가입하기</a></strong></span></li>
+</ul>
+<p><button type="submit">로그인</button></p>
+<p>&nbsp;</p>
+</form>

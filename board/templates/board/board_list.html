@@ -1,0 +1,17 @@
+<h2 style="text-align: center;"><span style="color: #000000; background-color: #ccffcc;"><strong>게시판&nbsp;</strong></span></h2>
+<hr />
+<p><button><a href="{%url 'myweb:home' %}">Home</a></button>
+<button><a href="{%url 'board:write' %}">글쓰기</a></button></p>
+<hr />
+
+{% if Post_list %}
+    <ul>
+    {%for Post in Post_list%}
+        <li><a href="/board/{{Post.id}}/">{{Post.subject}}</a></li>
+    {%endfor%}
+    </ul>
+{%else%}
+    <p>글이 없습니다.</p>
+{%endif%}
+<p>&nbsp;</p>
+

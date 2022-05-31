@@ -1,0 +1,10 @@
+<h1>글을 작성해주세요</h1>
+<form action="{% url 'board:save_post' %}" method="post">
+    {% csrf_token %}
+
+    <lable for="subject"> Subject: </lable><br>
+    <textarea name="subject" id="subject" style="width: 600px; height: 50px;" rows="15"></textarea><hr><br>
+    <lable for="content"> Content: </lable><br>
+    <textarea name="content" id="content" style="width: 600px; height: 200px;" rows="15"></textarea><hr><br>
+    <input type="submit" value="글 등록">
+</form>
